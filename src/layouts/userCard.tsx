@@ -21,7 +21,6 @@ const userCard = (props : propsType) => {
                         </div>
                         <div className="card-action">
                             <Link to={`/DetailLocataire/${props.user.id}`}>AFFICHER LE LOCATAIRE</Link>
-                            <a href="#">This is a link</a>
                         </div>
                     </div>
                 </div>

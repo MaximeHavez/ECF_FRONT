@@ -2,9 +2,11 @@ import React, {useEffect, useState} from "react";
 import {Button} from "react-bootstrap";
 import UserType from "../models/UserType";
 import {callUsersService} from "../services/usersServices";
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 
-const FormulaireAjout = () => {
+const FormulaireModif = () => {
+
+    const params = useParams();
 
     const [users, setUsers] = useState<UserType[]>( [])
     const [nom, setNom] = useState<string>("")
@@ -15,7 +17,7 @@ const FormulaireAjout = () => {
     const [newUser, setNewUser] = useState<UserType>(new UserType("","","","",0))
 
     useEffect(() => {
-        callUsersService.findAll().then(res => setUsers(res))
+        callUsersService.findUserById(params.id as string).then(res => setNewUser(res))
     },[])
 
     const changePrenom = (event : any) => {
@@ -49,47 +51,45 @@ const FormulaireAjout = () => {
     }
 
     const handleSubmit = () => {
-        console.log(newUser)
-        setUsers([...users,newUser])
-        callUsersService.addUser(newUser)
+        callUsersService.updateUser(params.id as string,newUser)
     }
 
     return(
         <>
             <div className="row">
                 <div className="input-field col s6">
-                    <input onChange={changePrenom} id="prenom" type="text" className="validate"/>
-                    <label className="active" htmlFor="prenom">Prénom</label>
+                    <input value={newUser.prenom} onChange={changePrenom} id="prenom" type="text" className="validate"/>
+                        <label className="active" htmlFor="prenom">Prénom</label>
                 </div>
 
                 <div className="input-field col s6">
-                    <input onChange={changeNom} id="nom" type="text" className="validate"/>
+                    <input value={newUser.nom} onChange={changeNom} id="nom" type="text" className="validate"/>
                     <label className="active" htmlFor="nom">Nom</label>
                 </div>
             </div>
 
             <div className="row">
                 <div className="input-field col s6">
-                    <input onChange={changeEmail} id="email" type="email" className="validate"/>
+                    <input value={newUser.email} onChange={changeEmail} id="email" type="email" className="validate"/>
                     <label className="active" htmlFor="email">Email</label>
                 </div>
 
                 <div className="input-field col s6">
-                    <input onChange={changeTel} id="Tel" type="number" className="validate"/>
+                    <input value={newUser.telephone} onChange={changeTel} id="Tel" type="number" className="validate"/>
                     <label className="active" htmlFor="Tel">Telephone</label>
                 </div>
             </div>
 
             <div className="row">
                 <div className="input-field col s6">
-                    <input onChange={changeDate} id="date" type="date" className="validate"/>
+                    <input value={newUser.dateNaissance} onChange={changeDate} id="date" type="date" className="validate"/>
                     <label className="active" htmlFor="date">Date de naissance</label>
                 </div>
             </div>
 
-            <Link to="/Gestionlocataires"><Button className="waves-effect waves-light btn" onClick={handleSubmit}>Inscrire le nouveau locataire</Button></Link>
+            <Link to={`/DetailLocataire/${newUser.id}`}><Button className="waves-effect waves-light btn" onClick={handleSubmit}>Modifier le locataire</Button></Link>
         </>
     )
 }
 
-export default FormulaireAjout;
+export default FormulaireModif;

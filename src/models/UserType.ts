@@ -3,11 +3,11 @@ export default class UserType {
     public static IdUser = 0;
     nom:string;
     prenom:string;
-    dateNaissance:Date;
+    dateNaissance:string;
     email:string;
     telephone:number;
 
-    constructor(nom: string, prenom: string, dateNaissance: Date, email: string, telephone: number) {
+    constructor(nom: string, prenom: string, dateNaissance: string, email: string, telephone: number) {
         this.id = UserType.IdUser++;
         this.nom = nom;
         this.prenom = prenom;

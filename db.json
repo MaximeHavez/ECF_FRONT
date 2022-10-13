@@ -7,6 +7,14 @@
       "dateNaissance": "1983-07-01",
       "email": "havez.maxime@gmail.com",
       "telephone": "0754822198"
+    },
+    {
+      "id": 13,
+      "nom": "Flouquet",
+      "prenom": "Floriannon",
+      "dateNaissance": "2022-10-15",
+      "email": "floriannon.flouquet@gmail.com",
+      "telephone": "0712345678"
     }
   ],
   "vehicules": [
@@ -16,10 +24,9 @@
       "modele": "308",
       "immatriculation": "AB-974-WT",
       "etat": "A",
-      "prix": 3000.00,
+      "prix": 3000,
       "disponibilité": "Disponible",
       "typevehicule": "Voiture"
     }
   ]
-
 }

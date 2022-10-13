@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import UserType from "../models/UserType";
 import {callUsersService} from "../services/usersServices";
 import UserCard from "../layouts/userCard";
+import {Link} from "react-router-dom";
 
 const Gestionlocataires = () => {
 
@@ -15,6 +16,7 @@ const Gestionlocataires = () => {
 
     return(
       <>
+          <Link className="btn-floating right btn-large waves-effect waves-light red" to="/FormulaireAjout"><i className="material-icons">+</i></Link>
           {users.map((item,index)  =>
               <>
                 <UserCard key={index} user={item}/>
