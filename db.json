@@ -25,7 +25,17 @@
       "immatriculation": "AB-974-WT",
       "etat": "A",
       "prix": 3000,
-      "disponibilité": "Disponible",
+      "disponibilite": "Disponible",
+      "typevehicule": "Voiture"
+    },
+    {
+      "id": 1,
+      "marque": "Renault",
+      "modele": "Clio",
+      "immatriculation": "RT-875-DV",
+      "etat": "A",
+      "prix": "250",
+      "disponibilite": "Disponible",
       "typevehicule": "Voiture"
     }
   ]

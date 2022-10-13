@@ -6,6 +6,9 @@ import DetailLocataire from "./layouts/DetailLocataire";
 import FormulaireModif from "./components/FormulaireModif";
 import FormulaireAjout from "./components/FormulaireAjout";
 import Gestionvehicule from "./pages/Gestionvehicule";
+import DetailVehicule from "./layouts/DetailVehicule";
+import FormulaireAjoutVehicule from "./components/FormulaireAjoutVehicule";
+import FormulaireModifVehicule from "./components/FormulaireModifVehicule";
 
 
 function App() {
@@ -29,8 +32,11 @@ function App() {
                     <Route path="/Gestionlocataires" element={<Gestionlocataires/>}/>
                     <Route path="/Gestionvehicule" element={<Gestionvehicule/>}/>
                     <Route path="/DetailLocataire/:id" element={<DetailLocataire/>}/>
+                    <Route path="/DetailVehicule/:id" element={<DetailVehicule/>}/>
                     <Route path="/FormulaireModif/:id" element={<FormulaireModif/>}/>
+                    <Route path="/FormulaireModifVehicule/:id" element={<FormulaireModifVehicule/>}/>
                     <Route path="/FormulaireAjout" element={<FormulaireAjout/>}/>
+                    <Route path="/FormulaireAjoutVehicule" element={<FormulaireAjoutVehicule/>}/>
                 </Routes>
             </Router>
 

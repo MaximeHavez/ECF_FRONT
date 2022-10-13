@@ -8,7 +8,6 @@ export type propsType = {
 
 const userCard = (props : propsType) => {
 
-    console.log(props.user.id)
 
     return(
         <>
