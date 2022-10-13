@@ -19,7 +19,7 @@ function App() {
         <>
             <Router>
                 <nav>
-                    <div className="nav-wrapper">
+                    <div className="nav-wrapper blue darken-4">
                         <Link to="/" className="brand-logo "><img className="logoloca" src={localib}/></Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to="/">Accueil</Link></li>
