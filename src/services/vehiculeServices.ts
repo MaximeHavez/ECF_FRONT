@@ -1,4 +1,3 @@
-import UserType from "../models/UserType";
 import VehiculeType from "../models/VehiculeType";
 
 export class vehiculeServices  {

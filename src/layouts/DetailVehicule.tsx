@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import {Button} from "react-bootstrap";
-import UserType from "../models/UserType";
-import {callUsersService} from "../services/usersServices";
 import VehiculeType from "../models/VehiculeType";
 import {callVehiculeService} from "../services/vehiculeServices";
 

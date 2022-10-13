@@ -1,6 +1,6 @@
 import React from "react";
 import UserType from "../models/UserType";
-import {Link, Routes} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export type propsType = {
     user:UserType;

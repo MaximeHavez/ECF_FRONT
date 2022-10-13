@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {Button} from "react-bootstrap";
 import VehiculeType from "../models/VehiculeType";
 import {callVehiculeService} from "../services/vehiculeServices";
-import Select from 'react-select'
+
 
 const FormulaireAjoutVehicule = () => {
 
