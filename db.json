@@ -4,9 +4,21 @@
       "id": 0,
       "nom": "Havez",
       "prenom": "Maxime",
-      "dateNaissance": "01/07/1983",
+      "dateNaissance": "1983-07-01",
       "email": "havez.maxime@gmail.com",
       "telephone": "0754822198"
+    }
+  ],
+  "vehicules": [
+    {
+      "id": 0,
+      "marque": "Peugeot",
+      "modele": "308",
+      "immatriculation": "AB-974-WT",
+      "etat": "A",
+      "prix": 3000.00,
+      "disponibilité": "Disponible",
+      "typevehicule": "Voiture"
     }
   ]
 

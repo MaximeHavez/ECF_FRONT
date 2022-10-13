@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {useParams} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import UserType from "../models/UserType";
 import {callUsersService} from "../services/usersServices";
 
@@ -27,10 +27,11 @@ const DetailLocataire = () => {
                         <div className="card-content white-text">
                             <span className="card-title">{currentUser.prenom} {currentUser.nom}</span>
                             <p>Adresse Mail : {currentUser.email}</p>
+                            <p>Telephone : {currentUser.telephone}</p>
                         </div>
                         <div className="card-action">
-                            <a href="#">This is a link</a>
-                            <a href="#">This is a link</a>
+                            <Link to="/FormulaireAjout">Modifier</Link>
+                            <a href="#">Supprimer</a>
                         </div>
                     </div>
                 </div>

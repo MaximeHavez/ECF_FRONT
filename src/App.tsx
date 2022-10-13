@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
 import Gestionlocataires from "./pages/Gestionlocataires";
 import DetailLocataire from "./layouts/DetailLocataire";
+import FormulaireAjout from "./components/FormulaireAjout";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
                 <Routes>
                     <Route path="/Gestionlocataires" element={<Gestionlocataires/>}/>
                     <Route path="/DetailLocataire/:id" element={<DetailLocataire/>}/>
+                    <Route path="/FormulaireAjout" element={<FormulaireAjout/>}/>
                 </Routes>
             </Router>
 
