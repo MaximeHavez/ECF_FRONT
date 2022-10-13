@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "nom": "Havez",
+      "prenom": "Maxime",
+      "dateNaissance": "01/07/1983",
+      "email": "havez.maxime@gmail.com",
+      "telephone": "0754822198"
+    }
+  ]
+
+}
