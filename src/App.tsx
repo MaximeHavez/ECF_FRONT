@@ -9,6 +9,7 @@ import Gestionvehicule from "./pages/Gestionvehicule";
 import DetailVehicule from "./layouts/DetailVehicule";
 import FormulaireAjoutVehicule from "./components/FormulaireAjoutVehicule";
 import FormulaireModifVehicule from "./components/FormulaireModifVehicule";
+import localib from "./assets/localib.png"
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
             <Router>
                 <nav>
                     <div className="nav-wrapper">
-                        <Link to="/" className="brand-logo">Localib</Link>
+                        <Link to="/" className="brand-logo "><img className="logoloca" src={localib}/></Link>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><Link to="/">Accueil</Link></li>
                             <li><Link to="/Gestionlocataires">Gestion des locataires</Link></li>
