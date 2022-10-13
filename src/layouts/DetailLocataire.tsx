@@ -14,11 +14,14 @@ const DetailLocataire = () => {
 
     const [currentUser, setCurrentUser] = useState<UserType>(new UserType("","","","",0))
 
-
+    // Récupération d'un user par son id
     useEffect(() => {
         callUsersService.findUserById(params.id as string).then(res => setCurrentUser(res))
     },[])
 
+    /**
+     * Fonction permettant de supprimer un user avec le Call API
+     */
     const deleteUser = () => {
         callUsersService.deleteUser(params.id as string)
     }

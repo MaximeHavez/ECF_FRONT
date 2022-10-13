@@ -23,48 +23,79 @@ const FormulaireModif = () => {
         callVehiculeService.findVehiculeById(params.id as string).then(res => setNewVehicule(res))
     },[])
 
+    /**
+     * Fonction récupérant la valeur saisie de la marque et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeMarque = (event : any) => {
         event.preventDefault()
         setMarque(event.target.value)
         setNewVehicule({...newVehicule, marque:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie du modele et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeModele = (event : any) => {
         event.preventDefault()
         setModele(event.target.value)
         setNewVehicule({...newVehicule, modele:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie de l'immatriculation' et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeImmat = (event : any) => {
         event.preventDefault()
         setImmatriculation(event.target.value)
         setNewVehicule({...newVehicule, immatriculation:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie de l"état" et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeEtat = (event : any) => {
         event.preventDefault()
         setEtat(event.target.value)
         setNewVehicule({...newVehicule, etat:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie du prix et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changePrix = (event : any) => {
         event.preventDefault()
         setPrix(event.target.value)
         setNewVehicule({...newVehicule, prix:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie du type et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeType = (event : any) => {
         event.preventDefault()
         setTypeVehicule(event.target.value)
         setNewVehicule({...newVehicule, typevehicule:event.target.value})
     }
 
+    /**
+     * Fonction récupérant la valeur saisie de la diponibilité et l'enregistre dans le state du newVehicule
+     * @param event
+     */
     const changeDispo = (event : any) => {
         event.preventDefault()
         setDisponibilite(event.target.value)
         setNewVehicule({...newVehicule, disponibilite:event.target.value})
     }
 
+    /**
+     * Fonction permettant d'update un nouvel utilisateur dans le JSON grâce à son id
+     */
     const handleSubmit = () => {
         callVehiculeService.updateVehicule(params.id as string,newVehicule)
     }

@@ -14,11 +14,14 @@ const DetailVehicule = () => {
 
     const [currentVehicule, setCurrentVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
 
-
+    // Récupération d'un véhicule par son id
     useEffect(() => {
         callVehiculeService.findVehiculeById(params.id as string).then(res => setCurrentVehicule(res))
     },[])
 
+    /**
+     * Fonction permettant de supprimer un vehicule avec le Call API
+     */
     const deleteVehicule = () => {
         callVehiculeService.deleteVehicule(params.id as string)
     }
