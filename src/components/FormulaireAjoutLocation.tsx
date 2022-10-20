@@ -23,12 +23,13 @@ const FormulaireAjoutLocation = () => {
     const [date, setDate] = useState<any>("");
     const [newDate, setNewDate] = useState<any>()
     const [duree, setDuree] = useState<number>(0)
-    const [vehicule, setVehicule] =useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
+    const [vehicule, setVehicule] =useState<VehiculeType>(new VehiculeType("","","","",0,"","", ""))
     const [newLocation, setNewLocation] = useState<LocationType>(new LocationType("","",0,"",""))
     const [prixLocation, setPrixLocation] = useState<number>(0)
     const [locataires, setLocataires] = useState<UserType[]>([])
     const [idlocataire, setIdLocataire] = useState<string>("")
     const [idvehicule, setIdVehicule] = useState<string>("")
+    const [image, setImage] = useState<string>("")
 
 
 
@@ -43,6 +44,9 @@ const FormulaireAjoutLocation = () => {
         callUsersService.findAll().then(res => setLocataires(res))
     }, [])
 
+    /**
+     * Il calcule la durée de la location et le prix de la location.
+     */
     const handleClickDate = () => {
         const duree = ((newDate[1] -newDate[0]+1)/86400000)
         setDuree(duree)
@@ -51,12 +55,20 @@ const FormulaireAjoutLocation = () => {
 
     }
 
+    /**
+     * Une fonction qui gère le changement de l'identifiant du locataire.
+     * @param {any} event - n'importe quel
+     */
     const handleChange = (event:any) => {
         setIdLocataire(event.target.value)
         setIdVehicule(params.id as string)
-        setNewLocation({...newLocation, debut : date[0], fin : date[1], prixTotal : prixLocation, locataire : event.target.value, vehicule : params.id as string})
+
+        setNewLocation({...newLocation, debut : date[0], fin : date[1], prixTotal : prixLocation, locataire : event.target.value, vehicule : params.id as string })
     }
 
+    /**
+     * Il met à jour le véhicule et ajoute un nouveau loyer.
+     */
     const handleClickValidationLoc = () => {
         callVehiculeService.updateVehicule(params.id as string, vehicule)
         callRentService.addRent(newLocation)

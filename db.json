@@ -27,7 +27,7 @@
       "prix": 3000,
       "disponibilite": "Loué",
       "typevehicule": "Voiture",
-      "image": "voiture1.png"
+      "imgVehi": "voiture1.png"
     },
     {
       "id": 1,
@@ -38,7 +38,7 @@
       "prix": "250",
       "disponibilite": "Loué",
       "typevehicule": "Voiture",
-      "image": "voiture2.png"
+      "imgVehi": "voiture2.png"
     }
   ],
   "locations": [

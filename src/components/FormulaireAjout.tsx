@@ -29,7 +29,7 @@ const FormulaireAjout = () => {
     }
 
     /**
-     * Fonction récupérant la valeur du nom saisie de la date et l'enregistre dans le state du newUser
+     * Fonction récupérant la valeur du nom saisie et l'enregistre dans le state du newUser
      */
     const changeNom = (event : any) => {
         event.preventDefault()
@@ -38,7 +38,7 @@ const FormulaireAjout = () => {
     }
 
     /**
-     * Fonction récupérant la valeur du mail saisie de la date et l'enregistre dans le state du newUser
+     * Fonction récupérant la valeur du mail saisie et l'enregistre dans le state du newUser
      */
     const changeEmail = (event : any) => {
         event.preventDefault()
@@ -47,7 +47,7 @@ const FormulaireAjout = () => {
     }
 
     /**
-     * Fonction récupérant la valeur du telephone saisie de la date et l'enregistre dans le state du newUser
+     * Fonction récupérant la valeur du telephone saisie et l'enregistre dans le state du newUser
      */
     const changeTel = (event : any) => {
         event.preventDefault()
@@ -56,7 +56,7 @@ const FormulaireAjout = () => {
     }
 
     /**
-     * Fonction récupérant la valeur de la date saisie de la date et l'enregistre dans le state du newUser
+     * Fonction récupérant la valeur de la date saisie et l'enregistre dans le state du newUser
      */
     const changeDate = (event : any) => {
         event.preventDefault()

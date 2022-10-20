@@ -8,9 +8,10 @@ export default class VehiculeType {
     prix:number;
     disponibilite:string;
     typevehicule:string
+    imgVehi : string
 
 
-    constructor(marque: string, modele: string, immatriculation: string, etat: string, prix: number, disponibilite: string, typevehicule: string) {
+    constructor(marque: string, modele: string, immatriculation: string, etat: string, prix: number, disponibilite: string, typevehicule: string, imgVehi:string) {
         this.id = VehiculeType.IdUser++;
         this.marque = marque;
         this.modele = modele;
@@ -19,5 +20,6 @@ export default class VehiculeType {
         this.prix = prix;
         this.disponibilite = disponibilite;
         this.typevehicule = typevehicule;
+        this.imgVehi = imgVehi;
     }
 }

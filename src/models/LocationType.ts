@@ -10,6 +10,7 @@ export class LocationType {
     locataire : string
     vehicule : string
 
+
     public static idLocation = 0;
 
     constructor(debut: any, fin: any, prixTotal: number, locataire:string, vehicule:string) {
@@ -19,6 +20,7 @@ export class LocationType {
         this.id = uuid();
         this.locataire = locataire;
         this.vehicule = vehicule;
+
     }
 
 }

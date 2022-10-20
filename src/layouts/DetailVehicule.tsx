@@ -7,10 +7,7 @@ import {callVehiculeService} from "../services/vehiculeServices";
 const DetailVehicule = () => {
 
     const params = useParams();
-
-
-
-    const [currentVehicule, setCurrentVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
+    const [currentVehicule, setCurrentVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"","", ""))
 
     // Récupération d'un véhicule par son id
     useEffect(() => {

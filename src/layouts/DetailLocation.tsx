@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import voiture1 from "../assets/voiture1.png";
+
 import {Link, useParams} from "react-router-dom";
 import {LocationType} from "../models/LocationType";
 import {callRentService} from "../services/locationServices";
@@ -14,7 +14,7 @@ const DetailLocation = () => {
 
     const [location, setLocation] = useState<LocationType>(new LocationType(new Date,new Date,0,"",""))
     const [locataire, setLocataire] = useState<UserType>(new UserType("","","","",0))
-    const [vehicule, setVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
+    const [vehicule, setVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"","", ""))
 
     useEffect(() => {
         callRentService.findRentById(params.id as string).then(res => setLocation(res))
@@ -26,7 +26,7 @@ const DetailLocation = () => {
 
     useEffect(() => {
         callVehiculeService.findVehiculeById(location.vehicule).then(res => setVehicule(res))
-    },[location])
+    },[])
 
     return(
         <>
@@ -34,7 +34,7 @@ const DetailLocation = () => {
                 <div className="col s12 m7">
                     <div className="card blue-grey darken-1">
                         <div className="card-image">
-                            <img className="logoloca" src={voiture1}/>
+                            <img className="logoloca" src={require(`../assets/voiture1.png`)}/>
                                 <span className="card-title blue-grey darken-1">{vehicule.marque} {vehicule.modele}</span>
                         </div>
                         <div className="card-content white-text">

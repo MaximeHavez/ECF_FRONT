@@ -15,7 +15,7 @@ const FormulaireModif = () => {
     const [prix, setPrix] = useState(0)
     const [disponibilite, setDisponibilite] = useState("")
     const [typeVehicule, setTypeVehicule] = useState("")
-    const [newVehicule, setNewVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
+    const [newVehicule, setNewVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"","", ""))
 
     const [vehicules, setVehicule] = useState<VehiculeType[]>( [])
 

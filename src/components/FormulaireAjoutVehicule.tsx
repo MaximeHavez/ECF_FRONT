@@ -14,7 +14,7 @@ const FormulaireAjoutVehicule = () => {
     const [prix, setPrix] = useState(0)
     const [disponibilite, setDisponibilite] = useState("")
     const [typeVehicule, setTypeVehicule] = useState("")
-    const [newVehicule, setNewVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
+    const [newVehicule, setNewVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"","", ""))
 
     const [vehicules, setVehicule] = useState<VehiculeType[]>( [])
 
@@ -43,7 +43,7 @@ const FormulaireAjoutVehicule = () => {
     }
 
     /**
-     * Fonction récupérant la valeur saisie dee l'immatriculation et l'enregistre dans le state du newVehicule
+     * Fonction récupérant la valeur saisie de l'immatriculation et l'enregistre dans le state du newVehicule
      * @param event
      */
     const changeImmat = (event : any) => {
