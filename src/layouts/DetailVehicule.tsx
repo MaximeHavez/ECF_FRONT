@@ -39,6 +39,8 @@ const DetailVehicule = () => {
                     </div>
                     <div className="card-action">
                         <Link to={`/FormulaireModifVehicule/${params.id}`}>Modifier</Link>
+                        {currentVehicule.disponibilite == "Disponible" ? <Link to={`/FormulaireAjoutLocation/${params.id}`}>Louer ce véhicule</Link> : null}
+
                         <Link to="/Gestionvehicule"><Button onClick={deleteVehicule}>Supprimer</Button></Link>
                     </div>
                 </div>

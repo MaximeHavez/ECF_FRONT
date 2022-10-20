@@ -25,7 +25,7 @@
       "immatriculation": "AB-974-WT",
       "etat": "A",
       "prix": 3000,
-      "disponibilite": "Disponible",
+      "disponibilite": "Loué",
       "typevehicule": "Voiture"
     },
     {
@@ -35,8 +35,18 @@
       "immatriculation": "RT-875-DV",
       "etat": "A",
       "prix": "250",
-      "disponibilite": "Disponible",
+      "disponibilite": "Loué",
       "typevehicule": "Voiture"
+    }
+  ],
+  "locations": [
+    {
+      "id": 0,
+      "debut": "2022-10-09",
+      "fin": "2022-10-20",
+      "prixTotal": 0,
+      "locataire": 0,
+      "vehicule": 0
     }
   ]
 }

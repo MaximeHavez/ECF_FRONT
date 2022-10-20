@@ -10,6 +10,9 @@ import DetailVehicule from "./layouts/DetailVehicule";
 import FormulaireAjoutVehicule from "./components/FormulaireAjoutVehicule";
 import FormulaireModifVehicule from "./components/FormulaireModifVehicule";
 import localib from "./assets/localib.png"
+import GestionLocation from "./pages/GestionLocation";
+import DetailLocation from "./layouts/DetailLocation";
+import FormulaireAjoutLocation from "./components/FormulaireAjoutLocation";
 
 
 function App() {
@@ -25,6 +28,7 @@ function App() {
                             <li><Link to="/">Accueil</Link></li>
                             <li><Link to="/Gestionlocataires">Gestion des locataires</Link></li>
                             <li><Link to="/Gestionvehicule">Gestion de la flotte</Link></li>
+                            <li><Link to="/GestionLocation">Gestion des locations</Link></li>
                         </ul>
                     </div>
                 </nav>
@@ -32,12 +36,16 @@ function App() {
                 <Routes>
                     <Route path="/Gestionlocataires" element={<Gestionlocataires/>}/>
                     <Route path="/Gestionvehicule" element={<Gestionvehicule/>}/>
+                    <Route path="/GestionLocation" element={<GestionLocation/>}/>
                     <Route path="/DetailLocataire/:id" element={<DetailLocataire/>}/>
                     <Route path="/DetailVehicule/:id" element={<DetailVehicule/>}/>
+                    <Route path="/DetailLocation/:id" element={<DetailLocation/>}/>
                     <Route path="/FormulaireModif/:id" element={<FormulaireModif/>}/>
                     <Route path="/FormulaireModifVehicule/:id" element={<FormulaireModifVehicule/>}/>
                     <Route path="/FormulaireAjout" element={<FormulaireAjout/>}/>
+                    <Route path="/FormulaireAjoutLocation/:id" element={<FormulaireAjoutLocation/>}/>
                     <Route path="/FormulaireAjoutVehicule" element={<FormulaireAjoutVehicule/>}/>
+
                 </Routes>
             </Router>
 

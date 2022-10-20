@@ -1,0 +1,22 @@
+.titre {
+    font-size: 2em;
+    font-weight: bold;
+    color: darkcyan;
+}
+
+.calendrier {
+    margin-left: 20px;
+}
+
+.backgroundCalendar {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px;
+    justify-content: center;
+}
+
+.globalCalendar{
+    display: flex;
+}
