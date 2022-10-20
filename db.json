@@ -26,7 +26,8 @@
       "etat": "A",
       "prix": 3000,
       "disponibilite": "Loué",
-      "typevehicule": "Voiture"
+      "typevehicule": "Voiture",
+      "image": "voiture1.png"
     },
     {
       "id": 1,
@@ -36,7 +37,8 @@
       "etat": "A",
       "prix": "250",
       "disponibilite": "Loué",
-      "typevehicule": "Voiture"
+      "typevehicule": "Voiture",
+      "image": "voiture2.png"
     }
   ],
   "locations": [
@@ -47,6 +49,12 @@
       "prixTotal": 0,
       "locataire": 0,
       "vehicule": 0
+    },
+    {
+      "id": "80c5731-5d5e-3a4c-1df0-857f8dcc8",
+      "prixTotal": 3750,
+      "locataire": 57,
+      "vehicule": "1"
     }
   ]
 }

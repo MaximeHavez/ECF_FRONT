@@ -7,7 +7,8 @@ export type propsType = {
 }
 
 const LocationCard = (props : propsType) => {
-  return(
+
+    return(
       <>
           <div className="row">
               <div className="col s12 m6">

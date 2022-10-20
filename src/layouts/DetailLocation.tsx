@@ -12,7 +12,7 @@ const DetailLocation = () => {
 
     const params = useParams();
 
-    const [location, setLocation] = useState<LocationType>(new LocationType("","",0,"",""))
+    const [location, setLocation] = useState<LocationType>(new LocationType(new Date,new Date,0,"",""))
     const [locataire, setLocataire] = useState<UserType>(new UserType("","","","",0))
     const [vehicule, setVehicule] = useState<VehiculeType>(new VehiculeType("","","","",0,"",""))
 
