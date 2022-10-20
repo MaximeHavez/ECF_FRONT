@@ -27,7 +27,7 @@
       "prix": 3000,
       "disponibilite": "Loué",
       "typevehicule": "Voiture",
-      "imgVehi": "voiture1.png"
+      "imgVehi": "voiture1"
     },
     {
       "id": 1,
@@ -36,9 +36,9 @@
       "immatriculation": "RT-875-DV",
       "etat": "A",
       "prix": "250",
-      "disponibilite": "Loué",
+      "disponibilite": "Disponible",
       "typevehicule": "Voiture",
-      "imgVehi": "voiture2.png"
+      "imgVehi": "voiture2"
     }
   ],
   "locations": [

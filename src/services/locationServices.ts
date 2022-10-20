@@ -6,7 +6,7 @@ export class locationServices  {
     /* Une fonction qui est utilisée pour trouver tous les emplacements dans la base de données. */
     findAll = async () => {
         const response =  await fetch('http://localhost:3000/locations');
-        const data = await response.json();s
+        const data = await response.json();
         return data;
     }
 

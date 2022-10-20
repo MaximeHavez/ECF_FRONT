@@ -9,7 +9,7 @@ import Gestionvehicule from "./pages/Gestionvehicule";
 import DetailVehicule from "./layouts/DetailVehicule";
 import FormulaireAjoutVehicule from "./components/FormulaireAjoutVehicule";
 import FormulaireModifVehicule from "./components/FormulaireModifVehicule";
-import localib from "./assets/localib.png"
+import localib from "./assets/images/localib.png"
 import GestionLocation from "./pages/GestionLocation";
 import DetailLocation from "./layouts/DetailLocation";
 import FormulaireAjoutLocation from "./components/FormulaireAjoutLocation";

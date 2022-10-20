@@ -7,6 +7,8 @@ import {callUsersService} from "../services/usersServices";
 import UserType from "../models/UserType";
 import VehiculeType from "../models/VehiculeType";
 import {callVehiculeService} from "../services/vehiculeServices";
+import voiture1 from './../assets/images/voiture1.png';
+import voiture2 from './../assets/images/voiture2.png';
 
 const DetailLocation = () => {
 
@@ -26,7 +28,8 @@ const DetailLocation = () => {
 
     useEffect(() => {
         callVehiculeService.findVehiculeById(location.vehicule).then(res => setVehicule(res))
-    },[])
+    },[location])
+
 
     return(
         <>
@@ -34,7 +37,7 @@ const DetailLocation = () => {
                 <div className="col s12 m7">
                     <div className="card blue-grey darken-1">
                         <div className="card-image">
-                            <img className="logoloca" src={require(`../assets/voiture1.png`)}/>
+                            <img className="logoloca" src={voiture1} alt="location"/>
                                 <span className="card-title blue-grey darken-1">{vehicule.marque} {vehicule.modele}</span>
                         </div>
                         <div className="card-content white-text">
